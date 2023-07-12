@@ -1,0 +1,36 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.1'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.ipm.das'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+	
+	maven {
+  url 'https://cognizant-249946402182.d.codeartifact.us-east-1.amazonaws.com/maven/myRepo/'
+  credentials {
+      username "aws"
+      password 'eyJ2ZXIiOjEsImlzdSI6MTY4OTE0Mzk3OSwiZW5jIjoiQTEyOEdDTSIsInRhZyI6InNQSjBoRHZSWWxZaDVqSlFrYmxTemciLCJleHAiOjE2ODkxODcxNzksImFsZyI6IkExMjhHQ01LVyIsIml2IjoibF9Ra1BqcmpRbklabGZtNSJ9.P_5A2ocSiAToVoNytXJ59Q.STITqgJEHYi1egEg.fMBmlaYEveUwE_Fxj25eIzMMGRK2XCXHeYo-QP7VWCFXWWx2XIjJQBbwzNin7ToXuv_K96S10S-hvn9E_4vJyaCyNolMIQHSpFYUaOBAez3NIAqulsEPE9ALgHZo3eAtnByY_H7XvML7pCIg2hLMVSdMT75E8F35PT1tbuVbUuADNSWjxZ4leFLH9lZb9By-eqnSbpvdRmKpeJYDVmbH5Wa7y0ZA6JQfDIiISxQ19OirvRgZq9Lp2lL5MUAyJEHmVFe5M3MY9LkTtL6BwhvRZlan1ZFB_zFKuZB32GYNv-gK4UzPQUK8LNuUG8pswPWFHDsU0iOgCHYiL_IIl0g-3Jos7T72zgtLgt87MGRoydfpd_3gdHv0Yyssd3fNzlANfVIfoQ3PExUj_p6QYZdmRgfwB3NUcpg1st2kRyv1litfLHEN55mRBmniyJjAqm8e3GtT2R1HPBQubDYm-K_7P3tnToRXUiz_mOqyzLwL841TIvMi7-mWD_PR_EZ-0VBHIFFvmzFPFKHNjY-6LGkj5lli8gb42ml5az7WpTMFj4pNPchH23oNKSHQiqZYAQHzHHPkgJEhQ3JqcY3o1YTCTdM5I5WL20UblQoXKhuZKry_K3tc8NJmj8Hq-0RszZs8ymfrTlV-Bjs4IbWMf0beAIZwXvr6aCqs31DVjrEJm_wI7gXHjY3wbzsIHhDjKpnItgT7tPissBrsSXqRjoxDpC1MwAT8-VIekr0ppIOm-3jvYyqtbRCblnFp87TYeQ-o8ndcmivl488Y3PML7Ea4yD1YIW893AkBV--s-hL1BYgWBGp4619ud6Y2806BBdk9xm0OSKKhXk7YgEXS5JHyrL9WiJdb4k6FT5KOioN9DkcPfNkSpwbXmAZF_jtEMIVD4G_RLUv5n_Y4-7khkvMs6ndIVHp_PRQCqS38ROYg1kr1JujFmKzvuH0zJqKri9zFdyZ7hHBCK4wzGAUfW4T6N1DDhjoWsKK9BeaJ7t-VM8Wp-y4anTsccakHcWQGWaGBj8x5Plc3xTi5MfzC-eW1wdB2R4lCUR980MXcJUXcDVryXSymY7KDwyTng2MOa_OQcWUnjW6E8hUJCpyuS9_oH3F2Avatkqz24zhogczvQpcVzoeRbxmk55hPZ6atdLyoVCXJYYtw0Y9X3KAtaCO3zaVBJ_J7gI4ZvTNyYpQs1UrGHPBZMDZ6.OqVWXVuFFP4M6iB0ZeHuww'
+  }
+}
+}
+
+
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'com.ipm.util:IPMCommonService:0.0.1'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
