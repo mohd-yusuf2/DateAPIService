@@ -9,7 +9,7 @@ import com.ipm.util.IpmUtil;
 public class DateApiServiceApplication {  
   IpmUtil ipm=new IpmUtil();
 	public static void main(String[] args) {
-		SpringApplication.run(DateApiServiceApplication.class, args);
+		SpringApplication.run(DateApiServiceApplication.class, args); 
 	}
 
 }
